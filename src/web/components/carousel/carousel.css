@@ -6,6 +6,7 @@
     align-content: flex-start;
     width: 100vw;
     overflow-x: hidden;
+    min-height: 172px;
 }
 
 .SlidesContainer {
@@ -13,24 +14,31 @@
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
     align-content: flex-start;
-    margin: 0 6%;
     width: 100vw;
     overflow-x: hidden;
 }
 
+.ArrowContainer {
+    display: grid;
+    align-items: center;
+    width: 9vw;
+}
+
 i {
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 4px 4px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 20px;
 }
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    margin-right: 30%;
 }
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    margin-left: 30%;
 }

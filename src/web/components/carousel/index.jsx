@@ -16,22 +16,22 @@ export const Carousel = ({
     if (!itemList) return null;
     return (
         <div className='CarouselContainer'>
-            <a href={isPreviousScrollable ? `#item_${previousItem}` : null}>
-                <div onClick={isPreviousScrollable ? (event) => scrollTo(event, 'previous') : null}>
+            <div className='ArrowContainer' onClick={isPreviousScrollable ? (event) => scrollTo(event, 'previous') : null}>
+                <a href={isPreviousScrollable ? `#item_${previousItem}` : null}>
                     <i className='arrow left'></i>
-                </div>
-            </a>
+                </a>
+            </div>
             
             <div className='SlidesContainer'>
                 {itemList.map((item => (
                     <Box id={`item_${item.id + 1}`} key={item.id} title={item.title} />
                 )))}
             </div>
-            <a href={isNextScrollable ? `#item_${nextItem}` : null}>
-                <div onClick={isNextScrollable ? (event) => scrollTo(event, 'next') : null}>
+            <div className='ArrowContainer' onClick={isNextScrollable ? (event) => scrollTo(event, 'next') : null}>
+                <a href={isNextScrollable ? `#item_${nextItem}` : null}>
                     <i className='arrow right'></i>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     )
 }
